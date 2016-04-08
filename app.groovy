@@ -63,7 +63,7 @@ def myTimerEventHandler() {
 def motionHandler(evt) {
 	// log.debug "$evt.name: $evt.value"
     if (evt.value == "active") {
-		state.alertCount = state.alertCount + 1
+	state.alertCount = state.alertCount + 1
         log.debug "Alert threshold: ${state.alertCount}"
         log.debug "waitSeconds = ${waitSeconds}"
         startTimer(waitSeconds)
